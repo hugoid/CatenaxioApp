@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.catenaxio" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icono3"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalendarioActivity"
+            android:label="Calendario"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ConvocatoriaActivity"
+            android:label="Convocatorias"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".EstadisticasActivity"
+            android:label="Estadisticas"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ClasificacionActivity"
+            android:label="Clasificacion/Resultados"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".TablLiga"
+            android:label="Liga"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".ResultadosActivity"
+            android:label="@string/title_activity_resultados"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <service android:name=".MyAlarmService"
+            android:enabled="true" />
+
+        <receiver android:name=".Receiver"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/ElementoCelda"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="1"
+        android:id="@+id/labelJornada"
+        android:layout_weight="0.2"
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="18/8/2014"
+        android:id="@+id/labelFecha"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="18:00"
+        android:id="@+id/labelHora"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.2"
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="GetafeUnited"
+        android:id="@+id/labelRival"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.1"
+        android:textSize="14dp"
+        android:textColor="@color/white"/>
+
+    <requestFocus
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Giner"
+        android:textSize="14dp"
+        android:id="@+id/labelEstadio"
+        android:layout_weight="0.1"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:id="@+id/imagenEstadio"
+        android:src="@drawable/estadiogetafe"
+        android:layout_weight="1000"
+        android:layout_gravity="right"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
