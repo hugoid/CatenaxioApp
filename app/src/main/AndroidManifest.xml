@@ -9,11 +9,12 @@
         android:allowBackup="true"
         android:icon="@drawable/icono3"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false">
         <activity
             android:name=".MyActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,40 +24,55 @@
         <activity
             android:name=".CalendarioActivity"
             android:label="Calendario"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ConvocatoriaActivity"
             android:label="Convocatorias"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".EstadisticasActivity"
             android:label="Estadisticas"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ClasificacionActivity"
             android:label="Clasificacion/Resultados"
-            android:screenOrientation="landscape">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".TablLiga"
             android:label="Liga"
-            android:screenOrientation="landscape">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ResultadosActivity"
             android:label="@string/title_activity_resultados"
-            android:screenOrientation="landscape">
+            android:screenOrientation="portrait" >
         </activity>
 
-        <service android:name=".MyAlarmService"
+        <service
+            android:name=".MyAlarmService"
             android:enabled="true" />
 
-        <receiver android:name=".Receiver"/>
+        <receiver android:name=".Receiver" />
 
+        <activity
+            android:name=".ResultadosGanados"
+            android:label="Partidos Ganados"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ResultadosPerdidos"
+            android:label="Partidos Perdidos"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ResultadosEmpatados"
+            android:label="Partidos Empatados"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

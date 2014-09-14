@@ -14,6 +14,9 @@
     <item name="black" type="color">#000000</item>
     <item name="white" type="color">#FFFFFFFF</item>
 
+    <item name="redperder" type="color">#F75656</item>
+
+    <item name="greenganar" type="color">#19DF57</item>
     <item name="blueLigth" type="color">#58ACFA</item>
     <item name="gray" type="color">#EDEDED</item>
     <item name="darkdarkblue" type="color">#0B2161</item>

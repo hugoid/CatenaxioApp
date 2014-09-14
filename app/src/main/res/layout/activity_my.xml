@@ -73,7 +73,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="x"
+                    android:text=""
                     android:id="@+id/botonX"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"

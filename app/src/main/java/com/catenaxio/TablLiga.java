@@ -33,6 +33,24 @@ public class TablLiga extends TabActivity {
                 .setContent(intent);
         tabHost.addTab(spec);
 
+        intent = new Intent().setClass(this, ResultadosGanados.class);
+        spec = tabHost.newTabSpec("Ganados")
+                .setIndicator("Ganados")
+                .setContent(intent);
+        tabHost.addTab(spec);
+
+        intent = new Intent().setClass(this, ResultadosPerdidos.class);
+        spec = tabHost.newTabSpec("Perdidos")
+                .setIndicator("Perdidos")
+                .setContent(intent);
+        tabHost.addTab(spec);
+
+        intent = new Intent().setClass(this, ResultadosEmpatados.class);
+        spec = tabHost.newTabSpec("Empatados")
+                .setIndicator("Empatados")
+                .setContent(intent);
+        tabHost.addTab(spec);
+
 
 
 
