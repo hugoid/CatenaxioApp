@@ -142,7 +142,7 @@ public class ResultadosEmpatados extends Activity implements View.OnClickListene
 
             progreso=new ProgressDialog(ResultadosEmpatados.this);
             progreso.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            progreso.setMessage("Contactando con la federacion");
+            progreso.setMessage("¿Como se llamaba el hotel y las tres discotecas que fuiste en mallorca?");
             progreso.setCancelable(false);
             progreso.show();
 
@@ -157,7 +157,7 @@ public class ResultadosEmpatados extends Activity implements View.OnClickListene
             String urlString=urls[0];
 
             Log.d("background","mi url: "+urlString);
-            for(int i=0;i<1;i++){
+            for(int i=0;i<3;i++){
                 Log.d("background","cuenta:"+i);
                 SystemClock.sleep(1000);
             }
@@ -297,7 +297,7 @@ public class ResultadosEmpatados extends Activity implements View.OnClickListene
             }
             else{
                 progreso.dismiss();
-                Toast.makeText(getApplicationContext(), "Esta la federacion como para atenderte", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "¿Cuantos días bajaste a desayunar?", Toast.LENGTH_LONG).show();
             }
 
         }

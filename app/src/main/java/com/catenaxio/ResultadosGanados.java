@@ -163,7 +163,8 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
 
             progreso=new ProgressDialog(ResultadosGanados.this);
             progreso.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            progreso.setMessage("Contactando con la federacion");
+            progreso.setMessage ("¿Te gustaría ir a la ventanilla de la federación sin pasar por la sala de billar?");
+
             progreso.setCancelable(false);
             progreso.show();
 
@@ -178,7 +179,7 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
             String urlString=urls[0];
 
             Log.d("background","mi url: "+urlString);
-            for(int i=0;i<1;i++){
+            for(int i=0;i<2;i++){
                 Log.d("background","cuenta:"+i);
                 SystemClock.sleep(1000);
             }
@@ -242,26 +243,26 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
                         if(json.getJSONArray("datos").getJSONObject(i).getString("Abel").equalsIgnoreCase("1")){
                             abel++;
                         }
-                         if(json.getJSONArray("datos").getJSONObject(i).getString("Jesus").equalsIgnoreCase("1")){
+                        if(json.getJSONArray("datos").getJSONObject(i).getString("Jesus").equalsIgnoreCase("1")){
                             jesus++;
                         }
-                         if(json.getJSONArray("datos").getJSONObject(i).getString("Cano").equalsIgnoreCase("1")){
+                        if(json.getJSONArray("datos").getJSONObject(i).getString("Cano").equalsIgnoreCase("1")){
                             cano++;
                         }
 
-                         if(json.getJSONArray("datos").getJSONObject(i).getString("Hugo").equalsIgnoreCase("1")){
+                        if(json.getJSONArray("datos").getJSONObject(i).getString("Hugo").equalsIgnoreCase("1")){
                             hugo++;
                         }
-                         if(json.getJSONArray("datos").getJSONObject(i).getString("Javi").equalsIgnoreCase("1")){
+                        if(json.getJSONArray("datos").getJSONObject(i).getString("Javi").equalsIgnoreCase("1")){
                             javi++;
                         }
-                         if(json.getJSONArray("datos").getJSONObject(i).getString("Jordan").equalsIgnoreCase("1")){
+                        if(json.getJSONArray("datos").getJSONObject(i).getString("Jordan").equalsIgnoreCase("1")){
                             jordan++;
                         }
-                         if(json.getJSONArray("datos").getJSONObject(i).getString("Juanito").equalsIgnoreCase("1")){
+                        if(json.getJSONArray("datos").getJSONObject(i).getString("Juanito").equalsIgnoreCase("1")){
                             juanito++;
                         }
-                         if(json.getJSONArray("datos").getJSONObject(i).getString("Meri").equalsIgnoreCase("1")){
+                        if(json.getJSONArray("datos").getJSONObject(i).getString("Meri").equalsIgnoreCase("1")){
                             meri++;
                         }
                     }
@@ -315,7 +316,7 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
                         "&jesus="+Integer.toString(jesus)+"&cano="+Integer.toString(cano)+"&hugo="+Integer.toString(hugo)+
                         "&javi="+Integer.toString(javi)+"&jordan="+Integer.toString(jordan)+"&juanito="+Integer.toString(juanito)
                         +"&meri="+Integer.toString(meri);
-
+                Log.d("url","url: "+url);
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -326,7 +327,7 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
             }
             else{
                 progreso.dismiss();
-                Toast.makeText(getApplicationContext(), "Esta la federacion como para atenderte", Toast.LENGTH_LONG).show();
+                Toast.makeText(ResultadosGanados.this, "Hazte premium y te decimos como", Toast.LENGTH_LONG).show();
             }
 
         }

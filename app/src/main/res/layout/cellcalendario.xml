@@ -66,13 +66,6 @@
         android:layout_weight="0.1"
         android:textColor="@color/white"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:id="@+id/imagenEstadio"
-        android:src="@drawable/estadiogetafe"
-        android:layout_weight="1000"
-        android:layout_gravity="right"
-        android:textColor="@color/white"/>
+
 
 </LinearLayout>

@@ -143,7 +143,7 @@ public class ResultadosPerdidos extends Activity implements View.OnClickListener
 
             progreso=new ProgressDialog(ResultadosPerdidos.this);
             progreso.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            progreso.setMessage("Contactando con la federacion");
+            progreso.setMessage("Aprovechamos para recordar a todos esos jugadores que pasaron por el catenaxio");
             progreso.setCancelable(false);
             progreso.show();
 
@@ -158,7 +158,7 @@ public class ResultadosPerdidos extends Activity implements View.OnClickListener
             String urlString=urls[0];
 
             Log.d("background","mi url: "+urlString);
-            for(int i=0;i<1;i++){
+            for(int i=0;i<3;i++){
                 Log.d("background","cuenta:"+i);
                 SystemClock.sleep(1000);
             }
@@ -298,7 +298,7 @@ public class ResultadosPerdidos extends Activity implements View.OnClickListener
             }
             else{
                 progreso.dismiss();
-                Toast.makeText(getApplicationContext(), "Esta la federacion como para atenderte", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "¿tienes datos? ¿tienes wifi? pues entonces que quieres", Toast.LENGTH_LONG).show();
             }
 
         }
@@ -308,3 +308,4 @@ public class ResultadosPerdidos extends Activity implements View.OnClickListener
 
 
 }
+

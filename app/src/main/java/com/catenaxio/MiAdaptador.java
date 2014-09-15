@@ -59,63 +59,26 @@ public class MiAdaptador extends BaseAdapter {
         TextView textViewLugar=(TextView)view.findViewById(R.id.labelEstadio);
         textViewLugar.setText(lista_lugar.elementAt(position));
 
-        ImageView imageView=(ImageView)view.findViewById(R.id.imagenEstadio);
+        //ImageView imageView=(ImageView)view.findViewById(R.id.imagenEstadio);
         Context context = parent.getContext();
         //segun el estadio introduzco la imagen
         switch (lista_estadio.get(position)){
             case 0:
-                imageView.setImageResource(R.drawable.estadiogetafe);
+
 
                 view.setBackgroundColor(context.getResources().getColor(R.color.darkdarkblue));
                 break;
             case 1:
-                imageView.setImageResource(R.drawable.estadiogetafe);
+
                 view.setBackgroundColor(context.getResources().getColor(R.color.blueLigth));
                 break;
-            case 2:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                view.setBackgroundColor(context.getResources().getColor(R.color.darkdarkblue));
-                break;
-            case 3:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 4:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 5:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 6:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 7:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 8:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 9:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 10:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 11:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 12:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 13:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
-            case 14:
-                imageView.setImageResource(R.drawable.estadiogetafe);
-                break;
+
+
+
 
 
             default:
-                imageView.setImageResource(R.drawable.estadiogetafe);
+                view.setBackgroundColor(context.getResources().getColor(R.color.blueLigth));
                 break;
         }
         return view;

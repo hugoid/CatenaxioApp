@@ -77,7 +77,7 @@ public class ResultadosActivity extends Activity {
 
             progreso=new ProgressDialog(ResultadosActivity.this);
             progreso.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            progreso.setMessage("Contactando con la federacion");
+            progreso.setMessage("Verde destaca, rojo necesita mejorar y azul progresa adecuadamente");
             progreso.setCancelable(false);
             progreso.show();
 
@@ -92,7 +92,7 @@ public class ResultadosActivity extends Activity {
             String urlString=urls[0];
 
             Log.d("background","mi url: "+urlString);
-            for(int i=0;i<1;i++){
+            for(int i=0;i<2;i++){
                 Log.d("background","cuenta:"+i);
                 SystemClock.sleep(1000);
             }
@@ -213,7 +213,7 @@ public class ResultadosActivity extends Activity {
             }
             else{
                 progreso.dismiss();
-                Toast.makeText(getApplicationContext(), "Esta la federacion como para atenderte", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Esta la federacion a tope, intentalo mas tarde o ahora con internet", Toast.LENGTH_LONG).show();
             }
 
         }

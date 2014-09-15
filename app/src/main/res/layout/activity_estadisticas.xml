@@ -12,11 +12,29 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.5" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Descargar"
-        android:id="@+id/botonActualizar"
-        android:background="@color/darkblue"
-        android:textColor="@color/white"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Actualizar"
+            android:id="@+id/botonActualizar"
+            android:background="@color/darkblue"
+            android:textColor="@color/white"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Grafica % goles"
+            android:id="@+id/botonPorcentajeGoles"
+            android:background="@color/darkblue"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp" />
+    </LinearLayout>
+
 </LinearLayout>
