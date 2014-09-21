@@ -91,19 +91,19 @@ public class MiAdaptadorEstadistica extends BaseAdapter {
         else if(position==3){ //hugo
             imagenJugador.setImageResource(R.drawable.hugo4);
         }
-        else if(position==4){ //javi
-            imagenJugador.setImageResource(R.drawable.javi);
-        }
-        else if(position==5){ //jordan
+        //else if(position==4){ //javi
+        //  imagenJugador.setImageResource(R.drawable.javi);
+        //}
+        else if(position==4){ //jordan
             imagenJugador.setImageResource(R.drawable.jordan);
         }
-        else if(position==6){ //juanito
+        else if(position==5){ //juanito
             imagenJugador.setImageResource(R.drawable.juanito);
         }
-        else if(position==7){ //meri
+        else if(position==6){ //meri
             imagenJugador.setImageResource(R.drawable.meri);
         }
-        else if(position==8){ //meri
+        else if(position==7){ //fer
             imagenJugador.setImageResource(R.drawable.fer);
         }
 

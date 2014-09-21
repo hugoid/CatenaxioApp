@@ -83,12 +83,12 @@ public class MiAdaptadorResultados extends BaseAdapter {
         }
 
         //lista javi
-        TextView textViewJavi =(TextView)view.findViewById(R.id.javiPartido1);
+        /*TextView textViewJavi =(TextView)view.findViewById(R.id.javiPartido1);
         if(lista.get(position).getJavi().equalsIgnoreCase("1")) //ha ido
             textViewJavi.setText("x");
         else{
             textViewJavi.setText("o");
-        }
+        }*/
 
         //lista jordan
         TextView textViewJordan =(TextView)view.findViewById(R.id.jordanPartido1);

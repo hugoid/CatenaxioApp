@@ -17,15 +17,15 @@ public class ObjetoResultados {
     private String meri;
     private String indiceResultados;
 
-    public  ObjetoResultados(String res,String rival,String ab,String je,String ca,String hu,String ja,
-                                 String jo,String ju,String me,String indice){
+    public  ObjetoResultados(String res,String rival,String ab,String je,String ca,String hu,
+                             String jo,String ju,String me,String indice){
         this.resultado=res;
         this.rival=rival;
         this.abel=ab;
         this.jesus=je;
         this.cano=ca;
         this.hugo=hu;
-        this.javi=ja;
+        //this.javi=ja;
         this.jordan=jo;
         this.juanito=ju;
         this.meri=me;

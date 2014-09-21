@@ -49,7 +49,8 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
 
     private DownloadFilesTask hiloDescarga;
     private DownloadFilesTaskGrafica hiloDescargaGrafica;
-    private String[] nombres={"Abel","Anton","Cano","Hugo","Javi","Jordan","Juanito","Meri","Fer"};
+    //private String[] nombres={"Abel","Anton","Cano","Hugo","Javi","Jordan","Juanito","Meri","Fer"};
+    private String[] nombres={"Abel","Anton","Cano","Hugo","Jordan","Juanito","Meri","Fer"};
     public MiAdaptadorEstadistica adapter;
     public static final String PREFS_NAME = "Preferencias";
     @Override
@@ -58,9 +59,7 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
         setContentView(R.layout.activity_estadisticas);
 
         //
-        for(int i=0;i<9;i++){
-            Log.d("nombres","nombres:"+nombres[i]);
-        }
+
 
         SharedPreferences sharedPref = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         lista_partidos=new Vector<String>();
@@ -69,7 +68,7 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
         lista_asistencias=new Vector<String>();
         lista_partidosGanados=new Vector<String>();
         lista_porcentajeGoles=new Vector<String>();
-        for(int i=0;i<=8;i++){
+        for(int i=0;i<=7;i++){
             lista_partidos.add(sharedPref.getString(nombres[i]+"partidos", "0"));
             lista_titulares.add(sharedPref.getString(nombres[i]+"titulares", "0"));
             lista_goles.add(sharedPref.getString(nombres[i]+"goles", "0"));
@@ -164,7 +163,7 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
         }
         else if(view==botonGrafica){
             hiloDescargaGrafica = new DownloadFilesTaskGrafica();
-            hiloDescargaGrafica.execute("http://hidandroid.hol.es/catenaxio/obtener_estadisticas.php");
+            hiloDescargaGrafica.execute("http://hidandroid.hol.es/catenaxio/chart_goles.php");
         }
     }
 
@@ -260,7 +259,7 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
                     lista_porcentajeGoles.removeAllElements();
                 }
                 int goles_totales=0;
-                for(int i=0;i<=8;i++){
+                for(int i=0;i<=7;i++){
 
                     String nombre=json.getJSONArray("datos").getJSONObject(i).getString("jugador");
                     String partidos=json.getJSONArray("datos").getJSONObject(i).getString("partidos");
@@ -294,7 +293,7 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
 
                 SharedPreferences settings = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
                 SharedPreferences.Editor editor = settings.edit();
-                for(int i=0;i<=8;i++){
+                for(int i=0;i<=7;i++){
                     editor.putString(nombres[i]+"partidos", lista_partidos.get(i));
                     editor.putString(nombres[i]+"titulares", lista_titulares.get(i));
                     editor.putString(nombres[i]+"goles", lista_goles.get(i));
@@ -333,7 +332,7 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
             }
             else{
                 progreso.dismiss();
-                Toast.makeText(getApplicationContext(), "Efectivamente el amigo de jesus anton, oye que esto no va eh, mira si tienes internet o algo", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Mira si tienes internet o algo", Toast.LENGTH_LONG).show();
             }
 
         }
@@ -405,10 +404,14 @@ public class EstadisticasActivity extends Activity implements View.OnClickListen
 
 
 
-                String url="http://hidandroid.hol.es/catenaxio/chart_goles.html?abel="+lista_porcentajeGoles.get(0)+
+                /*String url="http://hidandroid.hol.es/catenaxio/chart_goles.html?abel="+lista_porcentajeGoles.get(0)+
                         "&jesus="+lista_porcentajeGoles.get(1)+"&cano="+lista_porcentajeGoles.get(2)+"&hugo="+lista_porcentajeGoles.get(3)+
                         "&javi="+lista_porcentajeGoles.get(4)+"&jordan="+lista_porcentajeGoles.get(5)+"&juanito="+lista_porcentajeGoles.get(6)
-                        +"&meri="+lista_porcentajeGoles.get(7);
+                        +"&meri="+lista_porcentajeGoles.get(7);*/
+                String url="http://hidandroid.hol.es/catenaxio/chart_goles.html?abel="+lista_goles.get(0)+
+                        "&jesus="+lista_goles.get(1)+"&cano="+lista_goles.get(2)+"&hugo="+lista_goles.get(3)+
+                        "&jordan="+lista_goles.get(4)+"&juanito="+lista_goles.get(5)
+                        +"&meri="+lista_goles.get(6);
                 Log.d("mostrar","url: "+url);
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));

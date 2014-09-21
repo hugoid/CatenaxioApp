@@ -253,11 +253,12 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
                         if(json.getJSONArray("datos").getJSONObject(i).getString("Hugo").equalsIgnoreCase("1")){
                             hugo++;
                         }
-                        if(json.getJSONArray("datos").getJSONObject(i).getString("Javi").equalsIgnoreCase("1")){
+                        /*if(json.getJSONArray("datos").getJSONObject(i).getString("Javi").equalsIgnoreCase("1")){
                             javi++;
-                        }
+                        }*/
                         if(json.getJSONArray("datos").getJSONObject(i).getString("Jordan").equalsIgnoreCase("1")){
                             jordan++;
+                            Log.d("resultados","sumo jordan");
                         }
                         if(json.getJSONArray("datos").getJSONObject(i).getString("Juanito").equalsIgnoreCase("1")){
                             juanito++;
@@ -266,7 +267,7 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
                             meri++;
                         }
                     }
-                    else if (json.getJSONArray("datos").getJSONObject(i).getString("GPE").equalsIgnoreCase("X")){
+                    /*else if (json.getJSONArray("datos").getJSONObject(i).getString("GPE").equalsIgnoreCase("X")){
                         abel = 5;
                         jesus = 2;
                         cano = 1;
@@ -275,7 +276,7 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
                         juanito=2;
                         javi=4;
                         meri=2;
-                    }
+                    }*/
 
 
                 }
@@ -312,9 +313,13 @@ public class ResultadosGanados extends Activity implements View.OnClickListener{
 
 
 
-                String url="http://hidandroid.hol.es/catenaxio/prueba_canvas.html?abel="+Integer.toString(abel)+
+                /*String url="http://hidandroid.hol.es/catenaxio/prueba_canvas.html?abel="+Integer.toString(abel)+
                         "&jesus="+Integer.toString(jesus)+"&cano="+Integer.toString(cano)+"&hugo="+Integer.toString(hugo)+
                         "&javi="+Integer.toString(javi)+"&jordan="+Integer.toString(jordan)+"&juanito="+Integer.toString(juanito)
+                        +"&meri="+Integer.toString(meri);*/
+                String url="http://hidandroid.hol.es/catenaxio/prueba_canvas.html?abel="+Integer.toString(abel)+
+                        "&jesus="+Integer.toString(jesus)+"&cano="+Integer.toString(cano)+"&hugo="+Integer.toString(hugo)+
+                        "&jordan="+Integer.toString(jordan)+"&juanito="+Integer.toString(juanito)
                         +"&meri="+Integer.toString(meri);
                 Log.d("url","url: "+url);
                 Intent intent = new Intent(Intent.ACTION_VIEW);

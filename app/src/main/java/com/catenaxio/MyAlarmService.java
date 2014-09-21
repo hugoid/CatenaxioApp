@@ -35,14 +35,14 @@ public class MyAlarmService extends Service
         super.onStart(intent, startId);
 
         mManager = (NotificationManager) this.getApplicationContext().getSystemService(this.getApplicationContext().NOTIFICATION_SERVICE);
-        Intent intent1 = new Intent(this.getApplicationContext(),MyActivity.class);
+        Intent intent1 = new Intent(this.getApplicationContext(),CalendarioActivity.class);
 
-        Notification notification = new Notification(R.drawable.ic_launcher,"This is a test message!", System.currentTimeMillis());
-        intent1.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP| Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Notification notification = new Notification(R.drawable.icono4,"Catenaxio!", System.currentTimeMillis());
+        intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
         PendingIntent pendingNotificationIntent = PendingIntent.getActivity( this.getApplicationContext(),0, intent1,PendingIntent.FLAG_UPDATE_CURRENT);
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
-        notification.setLatestEventInfo(this.getApplicationContext(), "AlarmManagerDemo", "This is a test message!", pendingNotificationIntent);
+        notification.setLatestEventInfo(this.getApplicationContext(), "CATENAXIO", "Partido del Catenaxio", pendingNotificationIntent);
 
         mManager.notify(0, notification);
     }

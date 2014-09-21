@@ -2,11 +2,13 @@ package com.catenaxio;
 import android.app.Activity;
 
 
-
+import android.os.SystemClock;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import java.io.InputStream;
 import java.net.URL;
@@ -18,12 +20,15 @@ import android.graphics.BitmapFactory;
 import android.widget.Toast;
 
 import com.catenaxio.R;
+import android.widget.Button;
 
-public class ClasificacionActivity extends Activity {
+public class ClasificacionActivity extends Activity implements View.OnClickListener{
     private ImageView imagen;
     private Bitmap bitmap;
     private ProgressDialog pDialog;
     private LoadImage hiloDescarga;
+
+    private Button clasificacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +36,11 @@ public class ClasificacionActivity extends Activity {
         setContentView(R.layout.activity_clasificacion);
 
         imagen=(ImageView)findViewById(R.id.imagenClasificacion);
-        hiloDescarga=new LoadImage();
-        hiloDescarga.execute("http://hidandroid.hol.es/catenaxio/clasificacion.png");
+
+        clasificacion=(Button)findViewById(R.id.botonDescargaClasificacion);
+        clasificacion.setOnClickListener(this);
+
+
     }
 
 
@@ -55,15 +63,27 @@ public class ClasificacionActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View view) {
+        if(view==clasificacion){
+            hiloDescarga=new LoadImage();
+            hiloDescarga.execute("http://hidandroid.hol.es/catenaxio/clasificacion.png");
+        }
+    }
+
     private class LoadImage extends AsyncTask<String, String, Bitmap> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(ClasificacionActivity.this);
-            pDialog.setMessage("Loading Image ....");
+            pDialog.setMessage("Cargando la clasificacion, descargando todos los virus de la pagina femafusa");
             pDialog.show();
         }
         protected Bitmap doInBackground(String... args) {
+            for(int i=0;i<3;i++){
+                SystemClock.sleep(1000);
+            }
+
             try {
                 bitmap = BitmapFactory.decodeStream((InputStream)new URL(args[0]).getContent());
             } catch (Exception e) {
@@ -77,7 +97,7 @@ public class ClasificacionActivity extends Activity {
                 pDialog.dismiss();
             }else{
                 pDialog.dismiss();
-                Toast.makeText(ClasificacionActivity.this, "Image Does Not exist or Network Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ClasificacionActivity.this, "Te quedaste si graduacion y ahora te quedas sin clasificacion", Toast.LENGTH_SHORT).show();
             }
         }
     }

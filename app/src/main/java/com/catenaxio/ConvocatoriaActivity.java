@@ -86,7 +86,7 @@ public class ConvocatoriaActivity extends Activity implements View.OnClickListen
         int antonInt=sharedPref.getInt("Anton", 0);
         int canoInt=sharedPref.getInt("Cano", 0);
         int hugoInt=sharedPref.getInt("Hugo", 0);
-        int javiInt=sharedPref.getInt("Javi", 0);
+        //int javiInt=sharedPref.getInt("Javi", 0);
         int jordanInt=sharedPref.getInt("Jordan", 0);
         int juanitoInt=sharedPref.getInt("Juanito", 0);
         int meriInt=sharedPref.getInt("Meri", 0);
@@ -97,7 +97,7 @@ public class ConvocatoriaActivity extends Activity implements View.OnClickListen
         lista_bajas.add(antonInt); //anton
         lista_bajas.add(canoInt); //cano
         lista_bajas.add(hugoInt); //hugo
-        lista_bajas.add(javiInt); //jav
+        //lista_bajas.add(javiInt); //jav
         lista_bajas.add(jordanInt); //jordan
         lista_bajas.add(juanitoInt); //juanito
         lista_bajas.add(meriInt); //meri
@@ -174,7 +174,7 @@ public class ConvocatoriaActivity extends Activity implements View.OnClickListen
 
 
     //clase asyntask de recibir
-     class DownloadFilesTask extends AsyncTask<String,Integer,Integer> {
+    class DownloadFilesTask extends AsyncTask<String,Integer,Integer> {
 
         private ProgressDialog progreso;
         @Override
@@ -204,42 +204,42 @@ public class ConvocatoriaActivity extends Activity implements View.OnClickListen
             }
 
 
-                InputStream is = null;
-                String result = "";
-                JSONObject json = null;
-                try{
-                    HttpClient httpclient = new DefaultHttpClient();
-                    HttpGet httppost = new HttpGet(urlString);
-                    //aadir url al post si quiero enviar la fecha
-                    //HttpPost httppost = new HttpPost(serverUrl);
-                    //List<NameValuePair> params = new ArrayList<NameValuePair>();
-                    //  params.add(new BasicNameValuePair("iddevice", regId));
-                    //httppost.setEntity(new UrlEncodedFormEntity(params));
-                    HttpResponse response = httpclient.execute(httppost);
-                    HttpEntity entity = response.getEntity();
-                    is = entity.getContent();
+            InputStream is = null;
+            String result = "";
+            JSONObject json = null;
+            try{
+                HttpClient httpclient = new DefaultHttpClient();
+                HttpGet httppost = new HttpGet(urlString);
+                //aadir url al post si quiero enviar la fecha
+                //HttpPost httppost = new HttpPost(serverUrl);
+                //List<NameValuePair> params = new ArrayList<NameValuePair>();
+                //  params.add(new BasicNameValuePair("iddevice", regId));
+                //httppost.setEntity(new UrlEncodedFormEntity(params));
+                HttpResponse response = httpclient.execute(httppost);
+                HttpEntity entity = response.getEntity();
+                is = entity.getContent();
 
+            }
+            catch(Exception e){
+                Log.d("background","error "+e);
+                return 1;
+            }
+
+
+            try{
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "\n");
                 }
-                catch(Exception e){
-                    Log.d("background","error "+e);
-                    return 1;
-                }
+                is.close();
+                result=sb.toString();
+            } catch(Exception e){ return 1;}
 
-
-                try{
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
-                    StringBuilder sb = new StringBuilder();
-                    String line = null;
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line + "\n");
-                    }
-                    is.close();
-                    result=sb.toString();
-                } catch(Exception e){ return 1;}
-
-                try{
-                    json = new JSONObject(result);
-                }catch(JSONException e){return 1;}
+            try{
+                json = new JSONObject(result);
+            }catch(JSONException e){return 1;}
 
             try {
                 Log.d("background","resultado: "+json.getJSONArray("datos"));

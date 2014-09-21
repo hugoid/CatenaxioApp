@@ -231,9 +231,9 @@ public class ResultadosEmpatados extends Activity implements View.OnClickListene
                         if(json.getJSONArray("datos").getJSONObject(i).getString("Hugo").equalsIgnoreCase("1")){
                             hugo++;
                         }
-                        if(json.getJSONArray("datos").getJSONObject(i).getString("Javi").equalsIgnoreCase("1")){
+                        /*if(json.getJSONArray("datos").getJSONObject(i).getString("Javi").equalsIgnoreCase("1")){
                             javi++;
-                        }
+                        }*/
                         if(json.getJSONArray("datos").getJSONObject(i).getString("Jordan").equalsIgnoreCase("1")){
                             jordan++;
                         }
@@ -285,9 +285,13 @@ public class ResultadosEmpatados extends Activity implements View.OnClickListene
             if(result==0){
                 progreso.dismiss();
 
-                String url="http://hidandroid.hol.es/catenaxio/chart_empatados.html?abel="+Integer.toString(abel)+
+               /* String url="http://hidandroid.hol.es/catenaxio/chart_empatados.html?abel="+Integer.toString(abel)+
                         "&jesus="+Integer.toString(jesus)+"&cano="+Integer.toString(cano)+"&hugo="+Integer.toString(hugo)+
                         "&javi="+Integer.toString(javi)+"&jordan="+Integer.toString(jordan)+"&juanito="+Integer.toString(juanito)
+                        +"&meri="+Integer.toString(meri);*/
+                String url="http://hidandroid.hol.es/catenaxio/chart_empatados.html?abel="+Integer.toString(abel)+
+                        "&jesus="+Integer.toString(jesus)+"&cano="+Integer.toString(cano)+"&hugo="+Integer.toString(hugo)+
+                        "&jordan="+Integer.toString(jordan)+"&juanito="+Integer.toString(juanito)
                         +"&meri="+Integer.toString(meri);
 
                 Intent intent = new Intent(Intent.ACTION_VIEW);

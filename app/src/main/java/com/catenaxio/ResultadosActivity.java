@@ -157,15 +157,15 @@ public class ResultadosActivity extends Activity {
                     String jesus=json.getJSONArray("datos").getJSONObject(i).getString("Jesus");
                     String cano=json.getJSONArray("datos").getJSONObject(i).getString("Cano");
                     String hugo=json.getJSONArray("datos").getJSONObject(i).getString("Hugo");
-                    String javi=json.getJSONArray("datos").getJSONObject(i).getString("Javi");
+                    //String javi=json.getJSONArray("datos").getJSONObject(i).getString("Javi");
                     String jordan=json.getJSONArray("datos").getJSONObject(i).getString("Jordan");
                     String juanito=json.getJSONArray("datos").getJSONObject(i).getString("Juanito");
                     String meri=json.getJSONArray("datos").getJSONObject(i).getString("Meri");
                     String indice=json.getJSONArray("datos").getJSONObject(i).getString("GPE");
                     String rival=json.getJSONArray("datos").getJSONObject(i).getString("Rival");
 
-                    ObjetoResultados miObjeto=new ObjetoResultados(resultado,rival,abel,jesus,cano,hugo,javi,jordan,
-                            juanito,meri,indice);
+                    //ObjetoResultados miObjeto=new ObjetoResultados(resultado,rival,abel,jesus,cano,hugo,javi,jordan,juanito,meri,indice);
+                    ObjetoResultados miObjeto=new ObjetoResultados(resultado,rival,abel,jesus,cano,hugo,jordan,juanito,meri,indice);
 
                     lista.add(miObjeto);
 
