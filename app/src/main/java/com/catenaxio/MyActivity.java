@@ -50,37 +50,41 @@ public class MyActivity extends Activity implements View.OnClickListener{
             Log.d("mostrar","primera vez aplicacion");
             alarmMgr = (AlarmManager)getApplicationContext().getSystemService(Context.ALARM_SERVICE);
             Intent intent = new Intent(getApplicationContext(), Receiver.class);
-            alarmIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, 0);
+
+          /*  AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
             // Set the alarm to start at 8:30 a.m.
             Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,26);
-            calendar.set(Calendar.HOUR_OF_DAY, 23);
-            calendar.set(Calendar.MINUTE, 20);
+            calendar.set(Calendar.MONTH,9);
+            calendar.set(Calendar.DAY_OF_MONTH,5);
+            calendar.set(Calendar.HOUR_OF_DAY, 3);
+            calendar.set(Calendar.MINUTE, 00);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
-            AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+            alarmIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, 0);
+            am = (AlarmManager) getSystemService(ALARM_SERVICE);
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
-/*
+
             //jordanda 2
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 49);
+            calendar.set(Calendar.MONTH,9);
+            calendar.set(Calendar.DAY_OF_MONTH,17);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 30);
             calendar.set(Calendar.SECOND, 00);
-            calendar.set(Calendar.AM_PM, Calendar.PM);
+            calendar.set(Calendar.AM_PM,Calendar.PM);
+
 
             alarmIntent = PendingIntent.getBroadcast(getApplicationContext(), 1, intent, 0);
             am = (AlarmManager) getSystemService(ALARM_SERVICE);
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 3
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 50);
+          /*  calendar.set(Calendar.MONTH,9);
+            calendar.set(Calendar.DAY_OF_MONTH,24);
+            calendar.set(Calendar.HOUR_OF_DAY, 10);
+            calendar.set(Calendar.MINUTE, 35);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -89,10 +93,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 4
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,10);
+            calendar.set(Calendar.DAY_OF_MONTH,7);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 42);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -101,10 +105,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 5
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,10);
+            calendar.set(Calendar.DAY_OF_MONTH,13);
+            calendar.set(Calendar.HOUR_OF_DAY, 8);
+            calendar.set(Calendar.MINUTE, 00);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -113,10 +117,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 6
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,10);
+            calendar.set(Calendar.DAY_OF_MONTH,22);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 30);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -125,9 +129,9 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 7
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
+            calendar.set(Calendar.MONTH,10);
+            calendar.set(Calendar.DAY_OF_MONTH,28);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
             calendar.set(Calendar.MINUTE, 51);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
@@ -137,10 +141,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 8
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,11);
+            calendar.set(Calendar.DAY_OF_MONTH,12);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 15);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -149,10 +153,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 9
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,11);
+            calendar.set(Calendar.DAY_OF_MONTH,19);
+            calendar.set(Calendar.HOUR_OF_DAY, 12);
+            calendar.set(Calendar.MINUTE, 00);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -161,10 +165,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 10
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,0);
+            calendar.set(Calendar.DAY_OF_MONTH,9);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 42);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -173,10 +177,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 11
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,0);
+            calendar.set(Calendar.DAY_OF_MONTH,16);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 10);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -185,10 +189,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 12
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,0);
+            calendar.set(Calendar.DAY_OF_MONTH,23);
+            calendar.set(Calendar.HOUR_OF_DAY, 10);
+            calendar.set(Calendar.MINUTE, 30);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -197,10 +201,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 13
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,0);
+            calendar.set(Calendar.DAY_OF_MONTH,30);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 00);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -209,10 +213,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 14
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,1);
+            calendar.set(Calendar.DAY_OF_MONTH,6);
+            calendar.set(Calendar.HOUR_OF_DAY, 10);
+            calendar.set(Calendar.MINUTE, 15);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -221,10 +225,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 15
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,1);
+            calendar.set(Calendar.DAY_OF_MONTH,13);
+            calendar.set(Calendar.HOUR_OF_DAY, 7);
+            calendar.set(Calendar.MINUTE, 15);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -233,10 +237,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 16
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,1);
+            calendar.set(Calendar.DAY_OF_MONTH,20);
+            calendar.set(Calendar.HOUR_OF_DAY, 23);
+            calendar.set(Calendar.MINUTE, 45);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -245,10 +249,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 17
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,1);
+            calendar.set(Calendar.DAY_OF_MONTH,27);
+            calendar.set(Calendar.HOUR_OF_DAY, 9);
+            calendar.set(Calendar.MINUTE, 30);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -257,10 +261,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 18
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,2);
+            calendar.set(Calendar.DAY_OF_MONTH,6);
+            calendar.set(Calendar.HOUR_OF_DAY, 10);
+            calendar.set(Calendar.MINUTE, 50);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -269,10 +273,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 19
-            calendar.set(Calendar.MONTH,8);
+            calendar.set(Calendar.MONTH,2);
             calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.HOUR_OF_DAY, 13);
+            calendar.set(Calendar.MINUTE, 00);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -281,9 +285,9 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 20
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
+            calendar.set(Calendar.MONTH,2);
+            calendar.set(Calendar.DAY_OF_MONTH,20);
+            calendar.set(Calendar.HOUR_OF_DAY, 10);
             calendar.set(Calendar.MINUTE, 51);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
@@ -293,10 +297,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 21
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,3);
+            calendar.set(Calendar.DAY_OF_MONTH,10);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 00);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
@@ -305,17 +309,29 @@ public class MyActivity extends Activity implements View.OnClickListener{
             am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
             //jordanda 22
-            calendar.set(Calendar.MONTH,8);
-            calendar.set(Calendar.DAY_OF_MONTH,18);
-            calendar.set(Calendar.HOUR_OF_DAY, 16);
-            calendar.set(Calendar.MINUTE, 51);
+            calendar.set(Calendar.MONTH,3);
+            calendar.set(Calendar.DAY_OF_MONTH,17);
+            calendar.set(Calendar.HOUR_OF_DAY, 10);
+            calendar.set(Calendar.MINUTE, 00);
             calendar.set(Calendar.SECOND, 00);
             calendar.set(Calendar.AM_PM, Calendar.PM);
 
             alarmIntent = PendingIntent.getBroadcast(getApplicationContext(), 21, intent, 0);
             am = (AlarmManager) getSystemService(ALARM_SERVICE);
-            am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);*/
+            am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
 
+
+            //jordanda extra
+            calendar.set(Calendar.MONTH,3);
+            calendar.set(Calendar.DAY_OF_MONTH,16);
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 00);
+            calendar.set(Calendar.SECOND, 00);
+            calendar.set(Calendar.AM_PM, Calendar.PM);
+
+            alarmIntent = PendingIntent.getBroadcast(getApplicationContext(), 22, intent, 0);
+            am = (AlarmManager) getSystemService(ALARM_SERVICE);
+            am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);*/
 
             //SharedPreferences.Editor editor = sharedPref.edit();
 //                editor.putInt("inicioAplicacion", 1);
@@ -323,6 +339,7 @@ public class MyActivity extends Activity implements View.OnClickListener{
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString("inicioAplicacion", "1");
             editor.commit();
+
         }
         else{
 

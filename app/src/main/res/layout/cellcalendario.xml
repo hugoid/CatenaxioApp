@@ -7,17 +7,17 @@
     android:padding="5dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="5dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="1"
         android:id="@+id/labelJornada"
-        android:layout_weight="0.2"
+        android:layout_weight="0.1"
         android:textSize="14dp"
         android:textColor="@color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="45dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="18/8/2014"
@@ -29,42 +29,44 @@
         android:textColor="@color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="18:00"
         android:id="@+id/labelHora"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_weight="0.2"
+        android:layout_weight="0.1"
         android:textSize="14dp"
         android:textColor="@color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="GetafeUnited"
         android:id="@+id/labelRival"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_weight="0.1"
+        android:layout_weight="0.2"
         android:textSize="14dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:lines="2"/>
 
     <requestFocus
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Giner"
         android:textSize="14dp"
         android:id="@+id/labelEstadio"
-        android:layout_weight="0.1"
-        android:textColor="@color/white"/>
+        android:layout_weight="0.2"
+        android:textColor="@color/white"
+        android:lines="2"/>
 
 
 
